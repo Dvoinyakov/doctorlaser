@@ -1,0 +1,16 @@
+/////////////////////////////////////////////////////////////
+// Миксин для шрифта
+/////////////////////////////////////////////////////////////
+
+webfont(namefont, weight)
+  @font-face
+    font-family namefont
+    src url('../fonts/' + namefont + '/' + namefont + '.woff') format('woff'),
+        url('../fonts/' + namefont + '/' + namefont + '.ttf') format('truetype'),
+        url('../fonts/' + namefont + '/' + namefont + '.otf') format('truetype'),
+        url('../fonts/' + namefont + '/' + namefont + '.svg#'+ family) format('svg')
+    font-weight weight
+
+/////////////////////////////////////////////////////////////
+// Миксин для шрифта
+/////////////////////////////////////////////////////////////
