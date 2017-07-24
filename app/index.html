@@ -19,32 +19,75 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#a3dfc7">
   </head>
   <header class="header">
-    <p>12312</p>
-  </header>
-  <body class="home">
-    <p></p><i class="fa fa-mobile"></i>
-    <section class="man">
-      <div class="man__content"></div>
-    </section>
-    <div class="table">
-      <div class="table__item"></div>
-      <div class="table__item table__item_red"></div>
-      <div class="table__item"></div>
-      <input class="table__item__button table__item_button__red" type="submit">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-xs-6"><img class="header__logo" src="img/logo.svg"></div>
+        <div class="hidden-sm col-md-5 hidden-xs">
+          <div class="header__address">
+            <p class="header__address__text"><i class="fa fa-map-marker header__address__icon__map"></i> Адрес: г. Москва, п. Коммунарка, Липовый парк д.9 <a class="header__address__link__to__map" href="#">На карте</a>
+            </p><a class="header__address__button header__address__button_js__order" href="#">Записаться на прием</a><a class="header__address__link__to__call header__address__link__to_call_js__call" href="#">Обратный звонок</a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-xs-6">
+          <div class="header__timephone">
+            <p class="header__timephone__text"><i class="fa fa-clock-o header__timephone__icon"></i> с <span>8:00</span> до <span>21:00</span> ежедневно 
+            </p><a class="header__timephone__phone" href="#">+7 (495) 135-05-92</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <p>
-      12312321
-      
-    </p>
-    <footer>
-      <p>
-        123
-        
-      </p>
-    </footer>
-    <link rel="stylesheet" href="css/libs.min.css">
-    <link rel="stylesheet" href="css/main.min.css">
-    <script type="text/javascript" src="js/common.js"></script>
-    <script type="text/javascript" src="js/libs.min.js"></script>
-  </body>
+  </header>
+  <div class="slider-main owl-carousel container">
+    <div class="slider-main__item" style="background-image:url(img/slider/slide_1.png);">
+      <div class="slider-main__content">
+        <div class="content__flex-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-offset-1 col-md-6 col-sm-offset-1 col-sm-offset-1 col-xs-12">
+                <h2 class="slider-main__content__h2">Гарантия</h2>
+                <p class="slider-main__content__p">качественного обслуживания</p><a class="slider-main__content__link" href="#">Узнать подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-main__item" style="background-image:url(img/slider/slide_2.png);">
+      <div class="slider-main__content">
+        <div class="content__flex-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-offset-1 col-md-6 col-sm-offset-1 col-sm-offset-1 col-xs-12">
+                <h2 class="slider-main__content__h2">Гарантия</h2>
+                <p class="slider-main__content__p">качественного обслуживания</p><a class="slider-main__content__link" href="#">Узнать подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="feature container">
+    <div class="row">
+      <div class="col-sm-4 col-md-4 col-xs-12">
+        <div class="feature__block"><img class="feature__block__icon" src="img/featured/laser-machine.svg">
+          <h2 class="feature__block__h3">Современное оборудование</h2><a class="feature__block__link" href="#">Подробнее</a>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-4 col-xs-12">
+        <div class="feature__block"><img class="feature__block__icon" src="img/featured/first-aid-kit.svg">
+          <h2 class="feature__block__h3">Квалифицированные специалисты</h2><a class="feature__block__link" href="#">Подробнее</a>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-4 col-xs-12">
+        <div class="feature__block"><img class="feature__block__icon" src="img/featured/discount-voucher.svg">
+          <h2 class="feature__block__h3">Доступные цены на весь спектр услуг</h2><a class="feature__block__link" href="#">Подробнее</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="text/javascript" src="js/libs.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
 </html>

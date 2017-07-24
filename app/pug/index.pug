@@ -1,19 +1,43 @@
 doctype html
 html
     include parts/header.pug
+    .slider-main.owl-carousel.container
+      .slider-main__item(style="background-image:url(img/slider/slide_1.png)")
+       .slider-main__content
+           .content__flex-center
+             .container
+               .row
+                   .col-md-offset-1.col-md-6.col-sm-offset-1.col-sm-offset-1.col-xs-12
+                      h2.slider-main__content__h2 Гарантия
+                      p.slider-main__content__p качественного обслуживания
+                      a.slider-main__content__link(href="#") Узнать подробнее
 
-    body.home
-        p.
-        i.fa.fa-mobile
-        section.man
-            .man__content
+      .slider-main__item(style="background-image:url(img/slider/slide_2.png)")
+       .slider-main__content
+          .content__flex-center
+             .container
+                .row
+                   .col-md-offset-1.col-md-6.col-sm-offset-1.col-sm-offset-1.col-xs-12
+                      h2.slider-main__content__h2 Гарантия
+                      p.slider-main__content__p качественного обслуживания
+                      a.slider-main__content__link(href="#") Узнать подробнее
 
-        .table
-            .table__item
-            .table__item.table__item_red
-            .table__item
-            input(type="submit", class="table__item__button table__item_button__red")
-        p.
-            12312321
 
-        include parts/footer.pug
+    .feature.container
+        .row
+            .col-sm-4.col-md-4.col-xs-12
+               .feature__block
+                img(src="img/featured/laser-machine.svg" class="feature__block__icon")
+                h2.feature__block__h3 Современное оборудование
+                a.feature__block__link(href="#") Подробнее
+            .col-sm-4.col-md-4.col-xs-12
+               .feature__block
+                img(src="img/featured/first-aid-kit.svg" class="feature__block__icon")
+                h2.feature__block__h3 Квалифицированные специалисты
+                a.feature__block__link(href="#") Подробнее
+            .col-sm-4.col-md-4.col-xs-12
+               .feature__block
+                img(src="img/featured/discount-voucher.svg" class="feature__block__icon")
+                h2.feature__block__h3 Доступные цены на весь спектр услуг
+                a.feature__block__link(href="#") Подробнее
+    include parts/footer.pug

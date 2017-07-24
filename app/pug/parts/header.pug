@@ -10,7 +10,6 @@ head
     link(rel="apple-touch-icon" href="")
     link(rel="apple-touch-icon" sizes="72x72" href="")
     link(rel="apple-touch-icon" sizes="114x114" href="")
-
     //chrome
     meta(name="theme-color" content="#a3dfc7")
     //windows /phone
@@ -18,5 +17,27 @@ head
     //ios /safari
     meta(name="apple-mobile-web-app-status-bar-style" content="#a3dfc7")
 header.header
-    p.
-        12312
+    .container
+        .row
+            .col-sm-6.col-md-4.col-xs-6
+                img.header__logo(src="img/logo.svg")
+            .hidden-sm.col-md-5.hidden-xs
+                .header__address
+                    p.header__address__text
+                     i.fa.fa-map-marker.header__address__icon__map
+                     =' '
+                     | Адрес: г. Москва, п. Коммунарка, Липовый парк д.9
+                     =' '
+                     a.header__address__link__to__map(href="#") На карте
+                    a.header__address__button.header__address__button_js__order(href="#") Записаться на прием
+                    a.header__address__link__to__call.header__address__link__to_call_js__call(href="#") Обратный звонок
+
+            .col-sm-6.col-md-3.col-xs-6
+                .header__timephone
+                    p.header__timephone__text
+                     i.fa.fa-clock-o.header__timephone__icon
+                     =' '
+                     | с <span>8:00</span> до <span>21:00</span> ежедневно
+                     =' '
+                    a.header__timephone__phone(href='#') +7 (495) 135-05-92
+

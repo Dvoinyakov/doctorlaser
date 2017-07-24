@@ -12,7 +12,8 @@ var gulp        = require('gulp'),
     cache       = require('gulp-cache'),
     autopref    = require('gulp-autoprefixer'),
     pug         = require('gulp-pug'),
-    ghPages     = require('gulp-gh-pages');
+    imagemin    = require('gulp-imagemin'),
+    imJpeg = require('imagemin-jpeg-recompress');
 
 
 gulp.task('styl', function () {
@@ -40,7 +41,8 @@ gulp.task('pugbuild', function () {
 gulp.task('scripts', function () {
     return gulp.src([
         'app/libs/jquery/dist/jquery.min.js',
-        'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js'
+        'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
+        'app/libs/owl.carousel/dist/owl.carousel.js'
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
@@ -60,7 +62,7 @@ gulp.task('browser-sync', function () {
 });
 
 
-gulp.task('cssmin', ['styl'], function() {
+gulp.task('cssmin', ['styl','pugbuild'], function() {
     return gulp.src(['app/css/libs.css','app/css/main.css'])
         .pipe(cssnano())
         .pipe(rename({suffix: '.min'}))
@@ -68,7 +70,7 @@ gulp.task('cssmin', ['styl'], function() {
 });
 
 
-gulp.task('watch', ['cssmin','pugbuild', 'scripts'], function() {
+gulp.task('watch', ['cssmin', 'scripts'], function() {
     gulp.watch('app/stylus/*.styl', ['styl']);
     gulp.watch('app/pug/*.pug', ['pugbuild']);
     gulp.watch('app/*.html', browserSync.reload);
@@ -78,16 +80,25 @@ gulp.task('watch', ['cssmin','pugbuild', 'scripts'], function() {
 
 gulp.task('default',['browser-sync', 'watch']);
 
-
-gulp.task('img', function () {
-   return gulp.src('app/img/**/*')
-   .pipe(cache(imagemin({
-        intelaced: true,
-        progressive: true,
-        svgoPlugins: [{removeViewBox: false}],
-        une: [pngquant]
-    })))
-       .pipe(gulp.dest('dist/img'));
+//сжатие картинок
+gulp.task('img', function() {
+    return gulp.src('app/img/**/*')
+        .pipe(cache(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imJpeg({
+                loops: 5,
+                min: 65,
+                max: 70,
+                quality:'medium'
+            }),
+            imagemin.svgo(),
+            imagemin.optipng({optimizationLevel: 3}),
+            pngquant({quality: '65-70', speed: 5})
+        ],{
+            verbose: true
+        })))
+        .pipe(gulp.dest('dist/img'));
 });
 
 

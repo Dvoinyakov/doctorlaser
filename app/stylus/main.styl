@@ -4,18 +4,155 @@
 
 body
   background-color white
+  color #202020
   font-family default-font
   opacity 1
   overflow-x hidden
   font-size 20px
   line-height 30px
-.man-body
-    width: 200px
-    &___button
-      background-color #000
-    &__content
-      height: 200px
-      background-color rgba(#fff, .1)
+.header__logo
+  width: 280px
+  padding-top 10px
+.header__address__icon__map
+  color fcolor
+  font-size: 20px
+  vertical-align middle
+.header__address__text
+  font-size: 13px
+  display block
+  font-weight 100
+  white-space nowrap
+.header__address__link__to__map
+  text-decoration underline
+  font-weight 100
+  font-size: 13px
+  color #202020
+  padding-left 5px
+  transition .2s ease
+  &:hover
+    color fcolor
+    transition .2s ease
+    cursor pointer
+.header__address__button
+  background-color fcolor
+  font-weight 600
+  color #fff
+  padding 13px 20px
+  text-decoration none
+  font-size: 12px
+  border 1px solid fcolor
+  transition .2s ease
+  text-transform uppercase
+  &:hover
+    border 1px solid fcolor
+    transition .2s ease
+    background-color #fff
+    color fcolor
+    cursor pointer
+.header__address__link__to__call
+  text-decoration underline
+  color #202020
+  font-size 15px
+  font-weight 600
+  margin-left 13px
+  &:hover
+    color fcolor
+    transition .2s ease
+    cursor pointer
+.header__timephone
+  text-align right
+.header__timephone__text
+  font-size 15px
+  white-space nowrap
+  span
+    color fcolor
+    font-weight 600
+    font-family PfDinTextPro-Medium
+.header__timephone__icon
+  color fcolor
+  font-size 15px
+.header__timephone__phone
+  font-size 25px
+  white-space nowrap;
+  font-family PfDinTextPro-Medium
+  color #202020
+  text-decoration none
+.slider-main
+  margin-top: 40px
+  position relative
+.slider-main__item
+  height 349px
+  width 100%
+  background-size cover
+  background-position center
+.owl-prev, .owl-next
+  position absolute
+  top calc(50% - 30px)
+  color white
+  font-size: 39px
+  &:hover
+    color darken(#fff, 5%)
+    transition .2s ease
+.owl-prev
+  left 40px
+.owl-next
+  right 40px
+.slider-main__content
+  text-align left
+  display flex
+  height 100%
+  position relative
+  top 0
+  &__h2
+   color white
+   font-family Raleway-ExtraBold
+   font-size: 60px
+   margin: 0
+   margin-left -3px
+   text-transform uppercase
+  &__p
+   font-weight 600
+   color #fff
+   font-size 1.08em
+   margin: 11px 0
+  &__link
+   padding 12px 19px
+   background-color #fff
+   color #202020
+   font-weight bold
+   text-decoration none
+   font-size 16px
+   border 1px solid transparent
+   transition .2s ease
+   &:hover
+    background-color transparent
+    color white
+    border 1px solid white
+    transition .2s ease
+.content__flex-center
+  margin auto
+.feature
+   padding 20px 60px
+   position relative
+   top -45px
+   z-index 1
+   &__block
+    padding 20px
+    text-align center
+    background-color #fbfbfb
+    max-width 260px
+    transition .2s ease
+    &:hover
+      box-shadow(0px 0px 34px -1px rgba(#000,0.1))
+      transition .2s ease
+    &__icon
+       width 70px
+    &__h3
+       font-size 17px
+    &__link
+       text-decoration underline
+       color #202020
+       font-size: 15px
 
 
 @import '_media.styl'
