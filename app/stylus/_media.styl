@@ -32,14 +32,24 @@
 /*==========  Non-Mobile First Method  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
-
-}
-
+@media only screen and (max-width : 1200px)
+  .feature__block__icon
+    width 60px
+  .about__card__doctor
+    padding 30px 26.6px
+  .treatment__item__header__h4
+    font-size: 20px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
   .feature__block__h3
     font-size 14px
+  .feature__padding__block
+    padding 0 12px
+  .hexagon
+    display none
+  .treatment__item__header__h4
+    font-size 17px
+    line-height 19px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -63,20 +73,39 @@
     margin-bottom auto
     padding-left 66px
   .feature
-    padding 0
     top 0
+    background-color #fbfbfb
   .feature__block
     max-width none
     &:hover
      box-shadow none
   .feature__block__h3
-    font-size 12px
+    font-size 15px
     line-height 17px
   .feature__block__icon
-    width 40px
+    width 60px
   .feature__block__link
-    font-size: 12px
-
+    font-size: 14px
+  .slider-main
+    padding 0
+    margin 0
+  .card__doctor
+    height inherit
+    &__h5
+      font-size: 20px
+    &__p
+      font-size: 15px
+      line-height 20px
+      padding-bottom 50px
+    &__link
+      bottom 50px
+  .block__text__h3
+    font-size 24px
+  .block__text__p
+    font-size: 15px
+  .treatment__item
+    margin-top: 40px
+    padding-left 15px
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
   .header__timephone__phone
@@ -91,7 +120,7 @@
     bottom 40px
     font-size 29px
   .content__flex-center
-    padding 0
+    padding 0 40px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
   .header__logo

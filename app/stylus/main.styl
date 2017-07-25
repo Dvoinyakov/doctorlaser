@@ -10,6 +10,7 @@ body
   overflow-x hidden
   font-size 20px
   line-height 30px
+  min-height 5000px
 .header__logo
   width: 280px
   padding-top 10px
@@ -34,12 +35,13 @@ body
     transition .2s ease
     cursor pointer
 .header__address__button
-  background-color fcolor
+  font-size: 12px
   font-weight 600
+.button
+  background-color fcolor
   color #fff
   padding 13px 20px
   text-decoration none
-  font-size: 12px
   border 1px solid fcolor
   transition .2s ease
   text-transform uppercase
@@ -129,30 +131,226 @@ body
     color white
     border 1px solid white
     transition .2s ease
-.content__flex-center
-  margin auto
 .feature
-   padding 20px 60px
-   position relative
-   top -45px
-   z-index 1
-   &__block
+  padding 20px 60px
+  position relative
+  top -45px
+  z-index 1
+  &__block
     padding 20px
     text-align center
     background-color #fbfbfb
-    max-width 260px
     transition .2s ease
     &:hover
       box-shadow(0px 0px 34px -1px rgba(#000,0.1))
       transition .2s ease
+      .feature__block__link
+        text-decoration underline
+        transition .2s ease
     &__icon
-       width 70px
+      width 70px
     &__h3
-       font-size 17px
+      font-size 17px
+      margin: 0;
     &__link
-       text-decoration underline
-       color #202020
-       font-size: 15px
-
-
+      text-decoration none
+      color #202020
+      font-size: 15px
+.feature__padding__block
+  padding 0 44px
+.block__text
+  text-align center
+  &__h3
+    font-size 35px
+  &__p
+    font-size 20px
+.content__flex-center
+  margin auto
+.about__card__doctor
+  position relative
+  padding 30px 60px
+.card__doctor
+  background-color scolor
+  text-align center
+  transition .2s ease
+  height: 450px
+  &:hover
+   box-shadow(0px 0px 34px -1px rgba(#000,0.1))
+   transition .2s ease
+   cursor pointer
+   .card__doctor__link
+    text-decoration underline
+  &__h5
+   font-size 15px
+   font-weight 600
+   color #fff
+   margin 0
+   margin-top: 23px
+  &__p
+   font-size: 13px
+   font-weight 600
+   line-height  18px
+   color #fff
+   padding 0px 15px 20px 15px
+  &__img
+    width 100%
+  &__link
+    color #fff
+    text-decoration none
+    font-size 14px
+    position absolute
+    text-align center
+    bottom 33px
+    left calc(50% - 38px)
+.hexagon
+   position absolute
+   width 60px
+   height 33px
+   background-color #fff
+   top: calc(54% - 33px);
+   left: calc(50% - 33px);
+   font-size: 27px
+   font-weight: 600
+   display flex
+   justify-content center
+   align-content center
+   align-items center
+   &:before, &:after
+    content ""
+    position absolute
+    width 0
+    left 0
+    border-left 30px solid transparent
+    border-right 30px solid transparent
+   &:before
+    bottom 100%
+    border-bottom 21px solid #fff
+   &:after
+    top 100%
+    width 0
+    border-top 21px solid #fff
+.treatment
+  &__item__button
+    text-align center
+    margin-top: 40px
+  &__button
+    font-size: 15px
+    text-transform none
+  &__line
+    margin-top: 40px
+    &__hidden
+      display none
+  &__item
+   padding-left calc(50% - 500px)
+   &__header
+     display flex
+     justify-content flex-start
+     align-items center
+     &__img
+      width 54px
+     &__h4
+      font-size 22px
+      font-weight 600
+      padding-left 10px
+      margin: 0
+   &__p
+      font-size 14px
+      line-height 20px
+      margin-top 10px
+      padding-right: 40px
+   &__link
+      font-size 15px
+      color #000
+.callbacks
+  width 100%
+  background-color graycolor
+  margin-top: 50px
+.callbacks__form
+  display flex
+  flex-direction column
+  text-align center
+.callbacks__item
+  &__flex
+    display flex
+    justify-content space-between
+  &__h5
+    font-size 33px
+    font-family: Raleway-Bold
+    margin: 50px 0 27px 0
+  &__way
+    display none
+    &:focus
+      outline none
+  &__name, &__phone, &__time, &__date
+    margin: 10px 0
+    padding: 16px 13px
+    font-size: 16px
+    border 1px solid #ebedf0
+    font-family Raleway
+    border none
+    transition .25s ease
+    &:focus
+      outline none
+      box-shadow(0px 2px 0px 0px rgba(fcolor,1))
+      transition .25s ease
+  &__phone
+    margin: 10px 0
+    font-family "PF DinText Pro"
+  &__flex
+    margin: 10px 0
+  &__date
+    margin 10px 10px 10px 0px
+    width 100%
+    font-family "PF DinText Pro"
+  &__time
+    margin: 10px 0px 10px 10px
+    width 100%
+    font-family "PF DinText Pro"
+  &__button
+    margin: 10px 0
+.styledSelect
+  margin 10px 0
+  background white
+  border 1px solid #ebedf0
+  text-align left
+  width: 100%
+  position relative
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance:none;
+  font-size: 16px
+  padding: 16px 13px
+  border-radius 2px
+  -moz-appearance:none;
+  background-image:url('../img/caret-down.svg')
+  background-repeat: no-repeat;
+  background-size: 32px 12px;
+  background-position: right center;
+  background-clip: border-box;
+  -moz-background-clip: border-box;
+  -webkit-background-clip: border-box;
+.styledSelect:active, .styledSelect.active
+  background-color #eee
+.options
+  display none
+  font-size: 16px
+  position absolute
+  top 21%
+  right 0
+  left 0
+  z-index 999
+  margin 0 0
+  padding 0 0
+  list-style none
+  border 1px solid #ccc
+  background-color white
+.options li
+  padding 0 6px
+  margin 0 0
+  padding 0 10px
+.options li:hover
+  background-color fcolor
+  color white
+  cursor pointer
 @import '_media.styl'

@@ -25,19 +25,209 @@ html
 
     .feature.container
         .row
-            .col-sm-4.col-md-4.col-xs-12
+            .col-sm-4.col-md-4.col-xs-12.feature__padding__block
                .feature__block
                 img(src="img/featured/laser-machine.svg" class="feature__block__icon")
                 h2.feature__block__h3 Современное оборудование
                 a.feature__block__link(href="#") Подробнее
-            .col-sm-4.col-md-4.col-xs-12
+            .col-sm-4.col-md-4.col-xs-12.feature__padding__block
                .feature__block
                 img(src="img/featured/first-aid-kit.svg" class="feature__block__icon")
                 h2.feature__block__h3 Квалифицированные специалисты
                 a.feature__block__link(href="#") Подробнее
-            .col-sm-4.col-md-4.col-xs-12
+            .col-sm-4.col-md-4.col-xs-12.feature__padding__block
                .feature__block
                 img(src="img/featured/discount-voucher.svg" class="feature__block__icon")
                 h2.feature__block__h3 Доступные цены на весь спектр услуг
                 a.feature__block__link(href="#") Подробнее
-    include parts/footer.pug
+
+    .about.container
+        .row
+            .col-sm-12.col-md-12.col-xs-12.block__text
+                h3.block__text__h3 О нас
+                p.block__text__p.
+                    Клиника «DOKTOР Laser»  имеет все необходимое техническое и методологическое оснащение,   которые позволяют более успешно лечить широкий терапевтический спектр заболеваний.
+
+            .col-md-4.col-sm-4.col-xs-12.about__card__doctor
+                .card__doctor
+                    .hexagon Т
+                    img.card__doctor__img(src="img/about/doctor_1.png")
+                    h5.card__doctor__h5.
+                        Ковалева Татьяна Викторовна
+                    p.card__doctor__p.
+                        Кандидат медицинских наук, врач – терапевт высшей категории (стаж 25 лет), трансфузиолог (стаж 15 лет), физиотерапевт (стаж 20 лет).
+                    a.card__doctor__link(href="#") Подробнее
+            .col-md-4.col-sm-4.col-xs-12.about__card__doctor
+                .card__doctor
+                    .hexagon Н
+                    img.card__doctor__img(src="img/about/doctor_2.png")
+                    h5.card__doctor__h5.
+                        Хохлова Наталья Николаевна
+                    p.card__doctor__p.
+                        Врач высшей категории, терапевт, врач общей практики (стаж 16 лет) - профилактическая медицина, натуропатия, диагностика по Фоллю.
+                    a.card__doctor__link(href="#") Подробнее
+            .col-md-4.col-sm-4.col-xs-12.about__card__doctor
+                .card__doctor
+                    .hexagon Н
+                    img.card__doctor__img(src="img/about/doctor_3.png")
+                    h5.card__doctor__h5.
+                        Коротец Елена Владимировна
+                    p.card__doctor__p.
+                        Врач высшей категории, терапевт, кардиолог (стаж 12 лет)
+                    a.card__doctor__link(href="#") Подробнее
+
+
+    .treatment
+
+        .container.treatment__line
+            .row
+                .col-sm-12.col-md-12.col-xs-12.block__text
+                    h3.block__text__h3 Лечение
+                    p.block__text__p.
+                        С помощью наших технологий можно лечить огромный спектр заболеваний.
+
+                .col-sm-4.col-md-4.col-xs-12.treatment__item
+                    .treatment__item__header
+                      img.treatment__item__header__img(src="img/treatment/heart.svg")
+                      h4.treatment__item__header__h4.
+                        Сердечно-сосудистая система
+                    .treatment__item__p.
+                        Профилактика и лечение атеросклероза, сосудистой патологии сердца.
+                    a.treatment__item__link(href="#") Подробнее
+
+                .col-sm-4.col-md-4.col-xs-12.treatment__item
+                    .treatment__item__header
+                        img.treatment__item__header__img(src="img/treatment/spine.svg")
+                        h4.treatment__item__header__h4.
+                            Костно-мышечная система
+                    .treatment__item__p.
+                        Лечение остеохондроза, артритов,  фиброзов.
+                    a.treatment__item__link(href="#") Подробнее
+
+                .col-sm-4.col-md-4.col-xs-12.treatment__item
+                    .treatment__item__header
+                        img.treatment__item__header__img(src="img/treatment/hand-palm.svg")
+                        h4.treatment__item__header__h4.
+                            Нервная система
+                    .treatment__item__p.
+                        Лечение невритов,   нарушений кровообращения.
+                    a.treatment__item__link(href="#") Подробнее
+        .container.treatment__line
+            .row
+                .col-sm-4.col-md-4.col-xs-12.treatment__item
+                    .treatment__item__header
+                        img.treatment__item__header__img(src="img/treatment/stomach.svg")
+                        h4.treatment__item__header__h4.
+                            Система органов пищеварения
+                    .treatment__item__p.
+                        Немедикаментозное лечение желудочно-кишечных заболеваний, поджелудочной железы.
+                    a.treatment__item__link(href="#") Подробнее
+
+                .col-sm-4.col-md-4.col-xs-12.treatment__item
+                    .treatment__item__header
+                        img.treatment__item__header__img(src="img/treatment/blood-donation.svg")
+                        h4.treatment__item__header__h4.
+                            Эндокринная система
+                    .treatment__item__p.
+                        Лечение сахарного диабета и его осложнений,  аутоиммунных  заболеваний.
+                    a.treatment__item__link(href="#") Подробнее
+
+                .col-sm-4.col-md-4.col-xs-12.treatment__item
+                    .treatment__item__header
+                        img.treatment__item__header__img(src="img/treatment/kidneys.svg")
+                        h4.treatment__item__header__h4.
+                            Мочеполовая система
+                    .treatment__item__p.
+                        Лечение воспалительных  заболеваний мочеполового тракта,  бесплодия.
+                    a.treatment__item__link(href="#") Подробнее
+        .container.treatment__line.treatment__line__hidden
+            .row
+                .col-sm-4.col-md-4.col-xs-12.treatment__item
+                    .treatment__item__header
+                        img.treatment__item__header__img(src="img/treatment/lungs.svg")
+                        h4.treatment__item__header__h4.
+                            Пульмонология
+                    .treatment__item__p.
+                        Немедикаментозное лечение желудочно-кишечных заболеваний, поджелудочной железы.
+                    a.treatment__item__link(href="#") Подробнее
+
+                .col-sm-4.col-md-4.col-xs-12.treatment__item
+                    .treatment__item__header
+                        img.treatment__item__header__img(src="img/treatment/hair.svg")
+                        h4.treatment__item__header__h4.
+                            Дерматология
+                    .treatment__item__p.
+                        Лечение сахарного диабета и его осложнений,  аутоиммунных  заболеваний.
+                    a.treatment__item__link(href="#") Подробнее
+
+                .col-sm-4.col-md-4.col-xs-12.treatment__item
+                    .treatment__item__header
+                        img.treatment__item__header__img(src="img/treatment/ear.svg")
+                        h4.treatment__item__header__h4.
+                            Отоларингология
+                    .treatment__item__p.
+                        Лечение воспалительных  заболеваний мочеполового тракта,  бесплодия.
+                    a.treatment__item__link(href="#") Подробнее
+        .container.treatment__line.treatment__line__hidden
+            .row
+                .col-sm-4.col-md-4.col-xs-12.treatment__item
+                    .treatment__item__header
+                        img.treatment__item__header__img(src="img/treatment/light.svg")
+                        h4.treatment__item__header__h4.
+                            Хирургия
+                    .treatment__item__p.
+                        Немедикаментозное лечение желудочно-кишечных заболеваний, поджелудочной железы.
+                    a.treatment__item__link(href="#") Подробнее
+
+                .col-sm-4.col-md-4.col-xs-12.treatment__item
+                    .treatment__item__header
+                        img.treatment__item__header__img(src="img/treatment/tooth.svg")
+                        h4.treatment__item__header__h4.
+                            Стоматология
+                    .treatment__item__p.
+                        Лечение сахарного диабета и его осложнений,  аутоиммунных  заболеваний.
+                    a.treatment__item__link(href="#") Подробнее
+
+                .col-sm-4.col-md-4.col-xs-12.treatment__item
+                    .treatment__item__header
+                        img.treatment__item__header__img(src="img/treatment/gym.svg")
+                        h4.treatment__item__header__h4.
+                            Спортивная медицина
+                    .treatment__item__p.
+                        Лечение воспалительных  заболеваний мочеполового тракта,  бесплодия.
+                    a.treatment__item__link(href="#") Подробнее
+        .container.treatment__item__button
+           .row
+             .col-sm-12.col-md-12.col-xs-12
+               a.button.treatment__button(href="javascript:void(0);") Лечение других органов и систем
+    .callbacks
+      .container
+        .row
+            .col-md-offset-2.col-sm-offset-2.col-sm-4.col-md-4.col-xs-12.callbacks__form
+                h5.callbacks__item__h5 Запишитесь на прием
+                select.callbacks__item__way
+                    option(value='0') Выберите направление
+                    option(value='1') Сердечно-сосудистая система
+                    option(value='2') Костно-мышечная система
+                    option(value='3') Нервная система
+                    option(value='4') Система органов пищеварения
+                    option(value='5') Эндокринная система
+                    option(value='6') Мочеполовая система
+                    option(value='7') Пульмонология
+                    option(value='8') Дерматология
+                    option(value='9') Отоларингология
+                    option(value='10') Хирургия
+                    option(value='11') Стоматология
+                    option(value='12') Спортивная медицина
+                input.callbacks__item__name(placeholder='Ваше имя')
+                input.callbacks__item__phone(placeholder='Ваш телефон')
+                .callbacks__item__flex
+                 input.callbacks__item__date(placeholder='Дата')
+                 input.callbacks__item__time(placeholder='Время')
+                a.button(href="#") Отправить заявку
+                p.callbacks__item__text.
+                    Нажимая на кнопку «Отправить заявку», вы соглашаетесь с <span>политикой конфиденциальности</span>
+
+
+
+include parts/footer.pug
