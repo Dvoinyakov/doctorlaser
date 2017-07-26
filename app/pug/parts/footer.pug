@@ -1,4 +1,64 @@
+footer.footer
+    .container
+        .row
+            .col-sm-2.col-md-2.col-xs-2
+                img.footer__img(src="img/logo2.svg")
+                p.footer__timephone__text
+                    i.fa.fa-clock-o.footer__timephone__icon
+                    =' '
+                    | с <span>8:00</span> до <span>21:00</span> ежедневно
+                    =' '
+                a.footer__timephone__phone(href='#') 8 (495) 142-20-21
+                p.footer__address__text
+                    i.fa.fa-map-marker.footer__address__icon__map
+                    =' '
+                    | Адрес: Москва,п. Коммунарка, Липовый парк д.9
+            .col-md-offset-1.col-sm-2.col-md-2.col-xs-2
+                h5.footer__menu__h5 Клиника
+                ul.footer__menu__ul
+                    li.footer__menu__li
+                      a.footer__menu__a(href="#") О клинике
+                    li.footer__menu__li
+                      a.footer__menu__a(href="#") История лазерной медицины
+                    li.footer__menu__li
+                      a.footer__menu__a(href="#") О специалистах
+                    li.footer__menu__li
+                      a.footer__menu__a(href="#") Патенты
+                    li.footer__menu__li
+                      a.footer__menu__a(href="#") Цены
+            .col-sm-2.col-md-2.col-xs-2
+                h5.footer__menu__h5 Лечение
+                ul.footer__menu__ul
+                    li.footer__menu__li
+                        a.footer__menu__a(href="#") Методы
+                    li.footer__menu__li
+                        a.footer__menu__a(href="#") Лечебный эффект
+                    li.footer__menu__li
+                        a.footer__menu__a(href="#") Основные преимущества
+                    li.footer__menu__li
+                        a.footer__menu__a(href="#") Противопоказания
+                    li.footer__menu__li
+                        a.footer__menu__a(href="#") Показания для ВЛОК
+            .col-sm-2.col-md-2.col-xs-2
+                h5.footer__menu__h5 Литература
+                ul.footer__menu__ul
+                    li.footer__menu__li
+                        a.footer__menu__a(href="#") Книги
+                    li.footer__menu__li
+                        a.footer__menu__a(href="#") Статьи
+                    li.footer__menu__li
+                        a.footer__menu__a(href="#") Ссылки
+            .col-sm-2.col-md-2.col-xs-2
+                a.button(href="#") Как проехать
+
+                h5.footer__calback__form__h5 Закажите обратный звонок
+                input.footer__calback__form__input(placeholder="Ваш телефон")
+                submit.footer__calback__form__button(value="ok")
+
+                h5.footer__callback__social
+
 link(rel="stylesheet", href="css/libs.min.css")
 link(rel="stylesheet", href="css/main.css")
 script(type="text/javascript" src="js/libs.min.js")
+script(type="text/javascript" src="libs/lightbox2/dist/js/lightbox.js")
 script(type="text/javascript" src="js/common.js")

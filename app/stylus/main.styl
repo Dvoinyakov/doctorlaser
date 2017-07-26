@@ -10,7 +10,6 @@ body
   overflow-x hidden
   font-size 20px
   line-height 30px
-  min-height 5000px
 .header__logo
   width: 280px
   padding-top 10px
@@ -162,6 +161,7 @@ body
   text-align center
   &__h3
     font-size 35px
+    text-transform uppercase
   &__p
     font-size 20px
 .content__flex-center
@@ -263,12 +263,13 @@ body
       color #000
 .callbacks
   width 100%
-  background-color graycolor
   margin-top: 50px
+  background graycolor url("../img/doctor.png") 80% bottom no-repeat
 .callbacks__form
   display flex
   flex-direction column
   text-align center
+  margin-bottom 30px
 .callbacks__item
   &__flex
     display flex
@@ -286,7 +287,7 @@ body
     padding: 16px 13px
     font-size: 16px
     border 1px solid #ebedf0
-    font-family Raleway
+    font-family "PF DinText Pro"
     border none
     transition .25s ease
     &:focus
@@ -299,20 +300,43 @@ body
   &__flex
     margin: 10px 0
   &__date
-    margin 10px 10px 10px 0px
+    margin 5px 10px 10px 0px
     width 100%
-    font-family "PF DinText Pro"
+    font-family "PfDinTextPro-Regular"
+    background: #fff url('../img/calendar.svg') no-repeat scroll 132px 9px;
+    background-size 29px
+    &:focus
+      background: #fff url('../img/calendar_hover.svg') no-repeat scroll 132px 9px;
+      background-size 29px
   &__time
-    margin: 10px 0px 10px 10px
+    margin: 5px 0px 10px 10px
     width 100%
-    font-family "PF DinText Pro"
+    font-family "PfDinTextPro-Regular"
+    background: #fff url('../img/time.svg') no-repeat scroll 132px 9px;
+    background-size 29px
+    &:focus
+      background: #fff url('../img/time_hover.svg') no-repeat scroll 132px 9px;
+      background-size 29px
   &__button
-    margin: 10px 0
+    margin 10px auto
+    font-size 15px
+    padding 10px 50px
+    text-transform none
+    font-family Raleway-Semibold
+  &__text
+    font-size: 12px
+    line-height 20px
+    letter-spacing 0.6px
+    &__link
+      font-family Raleway-Bold
+      color fcolor
+      text-decoration underline
 .styledSelect
   margin 10px 0
   background white
   border 1px solid #ebedf0
   text-align left
+  font-family "PfDinTextPro-Regular"
   width: 100%
   position relative
   -webkit-box-sizing: border-box;
@@ -320,7 +344,7 @@ body
   box-sizing: border-box;
   -webkit-appearance:none;
   font-size: 16px
-  padding: 16px 13px
+  padding: 12px 13px
   border-radius 2px
   -moz-appearance:none;
   background-image:url('../img/caret-down.svg')
@@ -353,4 +377,100 @@ body
   background-color fcolor
   color white
   cursor pointer
+.opinion
+  margin-top: 20px
+  &__line
+   margin-top: 40px;
+  &__link
+   color #202020
+   text-align center
+   display block
+   margin-top 20px
+   font-family Raleway-Semibold
+   font-size: 16px
+   transition .2s ease
+   &:hover
+    color fcolor
+    transition .2s ease
+  &__item
+   display flex
+   justify-content: center;
+   &__img
+     border-radius 50%
+     width 90px
+     height 90px
+   &__text
+    color #202020
+    padding-left 20px
+   &__h5
+      font-size 20px
+      font-family Raleway-Semibold
+      margin 0
+      margin-bottom 10px
+   &__p
+      font-size 15px
+      font-family default-font
+      line-height 20px
+      margin: 0
+.diploma
+  margin-top: 20px
+  &__items
+    background graycolor
+    width 100%
+    padding 50px 0px
+    &__link
+      color #202020
+      text-align center
+      display block
+      margin-top 20px
+      font-family Raleway-Semibold
+      font-size: 16px
+      transition .2s ease
+    &__img
+      width 100%
+.footer
+  width 100%
+  margin-top: 40px
+  background scolor
+  padding: 20px 0 40px 0
+  &__timephone
+    &__text
+     color:white
+     font-size: 12px
+     span
+      font-family PfDinTextPro-Medium
+    &__phone
+      color white
+      font-family PfDinTextPro-Medium
+      text-decoration none
+      font-size: 21px
+  &__address
+    &__text
+      color white
+      line-height 19px
+      font-size: 12px
+    &__icon__map
+      color white
+.footer__menu
+  &__h5
+    color white
+    font-size: 20px
+    margin 0
+    margin-bottom: 20px
+    font-family Raleway-Semibold
+  &__ul
+    list-style-type none
+    font-size: 15px
+    margin 0
+    padding 0
+  &__li
+    margin: 0
+    padding: 0
+  &__a
+     text-decoration none
+     color white
+     line-height 10px
+     &:hover
+      text-decoration underline
+
 @import '_media.styl'

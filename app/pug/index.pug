@@ -203,7 +203,7 @@ html
     .callbacks
       .container
         .row
-            .col-md-offset-2.col-sm-offset-2.col-sm-4.col-md-4.col-xs-12.callbacks__form
+            .col-md-offset-1.col-sm-offset-1.col-sm-6.col-md-4.col-xs-12.callbacks__form
                 h5.callbacks__item__h5 Запишитесь на прием
                 select.callbacks__item__way
                     option(value='0') Выберите направление
@@ -224,10 +224,86 @@ html
                 .callbacks__item__flex
                  input.callbacks__item__date(placeholder='Дата')
                  input.callbacks__item__time(placeholder='Время')
-                a.button(href="#") Отправить заявку
-                p.callbacks__item__text.
-                    Нажимая на кнопку «Отправить заявку», вы соглашаетесь с <span>политикой конфиденциальности</span>
+                a.button.callbacks__item__button(href="#") Отправить заявку
+                p.callbacks__item__text
+                    |Нажимая на кнопку «Отправить заявку», вы соглашаетесь с
+                    =' '
+                    a.callbacks__item__text__link(href="#") политикой конфиденциальности
 
+    .opinion
+      .container
+        .row
+            .col-sm-12.col-md-12.col-xs-12.block__text
+                h3.block__text__h3 Отзывы
+                p.block__text__p.
+                    Наши пациенты оставили комментарии о клинике, которые вы можете прочитать.
+      .container.opinion__line
+          .row
+              .col-sm-6.col-md-4.col-xs-12.opinion__item
+                  img.opinion__item__img(src="img/opinion_people.jpg")
+                  .opinion__item__text
+                      h5.opinion__item__h5 Олеся Профитова
+                      p.opinion__item__p.
+                          Отличная клиника и отличные специалисты, а также быстрое и безболезненное лечение, все очень понравилось спасибо!
+              .col-sm-6.col-md-4.col-xs-12.opinion__item
+                    img.opinion__item__img(src="img/opinion_people.jpg")
+                    .opinion__item__text
+                        h5.opinion__item__h5 Олеся Профитова
+                        p.opinion__item__p.
+                            Отличная клиника и отличные специалисты, а также быстрое и безболезненное лечение, все очень понравилось спасибо!
+              .col-sm-6.col-md-4.col-xs-12.opinion__item
+                  img.opinion__item__img(src="img/opinion_people.jpg")
+                  .opinion__item__text
+                      h5.opinion__item__h5 Олеся Профитова
+                      p.opinion__item__p.
+                          Отличная клиника и отличные специалисты, а также быстрое и безболезненное лечение, все очень понравилось спасибо!
+      .container.opinion__line
+            .row
+                .col-sm-6.col-md-4.col-xs-12.opinion__item
+                    img.opinion__item__img(src="img/opinion_people.jpg")
+                    .opinion__item__text
+                        h5.opinion__item__h5 Олеся Профитова
+                        p.opinion__item__p.
+                            Отличная клиника и отличные специалисты, а также быстрое и безболезненное лечение, все очень понравилось спасибо!
+                .col-sm-6.col-md-4.col-xs-12.opinion__item
+                    img.opinion__item__img(src="img/opinion_people.jpg")
+                    .opinion__item__text
+                        h5.opinion__item__h5 Олеся Профитова
+                        p.opinion__item__p.
+                            Отличная клиника и отличные специалисты, а также быстрое и безболезненное лечение, все очень понравилось спасибо!
+                .col-sm-6.col-md-4.col-xs-12.opinion__item
+                    img.opinion__item__img(src="img/opinion_people.jpg")
+                    .opinion__item__text
+                        h5.opinion__item__h5 Олеся Профитова
+                        p.opinion__item__p.
+                            Отличная клиника и отличные специалисты, а также быстрое и безболезненное лечение, все очень понравилось спасибо!
+      a.opinion__link(href="#") Посмотреть все отзывы
 
-
+    .diploma
+        .container
+            .row
+                .col-sm-12.col-md-12.col-xs-12.block__text
+                    h3.block__text__h3 Лицензии и благодарности
+        .diploma__items
+            .container
+                .row
+                    .col-sm-2.col-md-2.col-xs-4
+                     a.diploma__items__link(href="img/diploma.jpg" data-lightbox="image-1" data-title="Описание")
+                      img.diploma__items__img(src="img/diploma.jpg" data-lightbox="image-1" data-title="Описание")
+                    .col-sm-2.col-md-2.col-xs-4
+                     a.diploma__items__link(href="img/diploma.jpg" data-lightbox="image-1" data-title="Описание")
+                      img.diploma__items__img(src="img/diploma.jpg" data-lightbox="image-1" data-title="Описание")
+                    .col-sm-2.col-md-2.col-xs-4
+                     a.diploma__items__link(href="img/diploma.jpg" data-lightbox="image-1" data-title="Описание")
+                      img.diploma__items__img(src="img/diploma.jpg" data-lightbox="image-1" data-title="Описание")
+                    .col-sm-2.col-md-2.col-xs-4
+                     a.diploma__items__link(href="img/diploma.jpg" data-lightbox="image-1" data-title="Описание")
+                      img.diploma__items__img(src="img/diploma.jpg" data-lightbox="image-1" data-title="Описание")
+                    .col-sm-2.col-md-2.col-xs-4
+                     a.diploma__items__link(href="img/diploma.jpg" data-lightbox="image-1" data-title="Описание")
+                      img.diploma__items__img(src="img/diploma.jpg" data-lightbox="image-1" data-title="Описание")
+                    .col-sm-2.col-md-2.col-xs-4
+                     a.diploma__items__link(href="img/diploma.jpg" data-lightbox="image-1" data-title="Описание")
+                         img.diploma__items__img(src="img/diploma.jpg" data-lightbox="image-1" data-title="Описание")
+            a.diploma__items__link(href='#') Посмотреть все
 include parts/footer.pug

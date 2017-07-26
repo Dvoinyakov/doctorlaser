@@ -88,5 +88,11 @@ $('.slider-main').owlCarousel({
 
     });
 
+    $(document).ready(function() {
+        $('.callbacks__item__date').mask('00/00');
+        $('.callbacks__item__time').mask('00:00');
+        $('.callbacks__item__phone').mask('8 (999) 999-99-99');
+    });
+
 
 });

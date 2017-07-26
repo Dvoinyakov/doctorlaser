@@ -42,7 +42,9 @@ gulp.task('scripts', function () {
     return gulp.src([
         'app/libs/jquery/dist/jquery.min.js',
         'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-        'app/libs/owl.carousel/dist/owl.carousel.js'
+        'app/libs/owl.carousel/dist/owl.carousel.js',
+        'app/libs/jquery-mask-plugin/dist/jquery.mask.min.js',
+        'app/libs/dist/lightbox.js'
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
@@ -53,7 +55,7 @@ gulp.task('scripts', function () {
 //обновление страницы
 gulp.task('browser-sync', function () {
     browserSync({
-        port:700,
+        port:900,
        server: {
            baseDir:'app'
        },
