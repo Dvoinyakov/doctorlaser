@@ -1,19 +1,19 @@
 footer.footer
     .container
         .row
-            .col-sm-2.col-md-2.col-xs-2
+            .col-sm-3.col-md-2.col-xs-12.footer__info
                 img.footer__img(src="img/logo2.svg")
                 p.footer__timephone__text
                     i.fa.fa-clock-o.footer__timephone__icon
                     =' '
                     | с <span>8:00</span> до <span>21:00</span> ежедневно
                     =' '
-                a.footer__timephone__phone(href='#') 8 (495) 142-20-21
-                p.footer__address__text
+                a.footer__timephone__phone(href='tel:84951422021') 8 (495) 142-20-21
+                a.footer__address__text(href="#maps__address")
                     i.fa.fa-map-marker.footer__address__icon__map
                     =' '
                     | Адрес: Москва,п. Коммунарка, Липовый парк д.9
-            .col-md-offset-1.col-sm-2.col-md-2.col-xs-2
+            .col-sm-3.col-md-2.col-xs-12
                 h5.footer__menu__h5 Клиника
                 ul.footer__menu__ul
                     li.footer__menu__li
@@ -26,7 +26,7 @@ footer.footer
                       a.footer__menu__a(href="#") Патенты
                     li.footer__menu__li
                       a.footer__menu__a(href="#") Цены
-            .col-sm-2.col-md-2.col-xs-2
+            .col-sm-3.col-md-2.col-xs-12
                 h5.footer__menu__h5 Лечение
                 ul.footer__menu__ul
                     li.footer__menu__li
@@ -39,7 +39,7 @@ footer.footer
                         a.footer__menu__a(href="#") Противопоказания
                     li.footer__menu__li
                         a.footer__menu__a(href="#") Показания для ВЛОК
-            .col-sm-2.col-md-2.col-xs-2
+            .col-sm-2.col-md-2.col-xs-12
                 h5.footer__menu__h5 Литература
                 ul.footer__menu__ul
                     li.footer__menu__li
@@ -48,17 +48,23 @@ footer.footer
                         a.footer__menu__a(href="#") Статьи
                     li.footer__menu__li
                         a.footer__menu__a(href="#") Ссылки
-            .col-sm-2.col-md-2.col-xs-2
-                a.button(href="#") Как проехать
+            .col-sm-3.col-md-3.col-xs-12
+                a.button.footer__button(href="#map") Как проехать
 
-                h5.footer__calback__form__h5 Закажите обратный звонок
-                input.footer__calback__form__input(placeholder="Ваш телефон")
-                submit.footer__calback__form__button(value="ok")
-
-                h5.footer__callback__social
-
+                h5.footer__callback__form__h5 Закажите обратный звонок
+                input.footer__callback__form__input(placeholder="Ваш телефон")
+                a.footer__callback__form__button.footer__callback__form__button_button__js__footer_callback(href="#")
+                    i.fa.fa-check.footer__callback__form__button__icon
+                h5.footer__social__h5 Социальные сети
+                   .footer__social
+                    a.footer__social__link(href="#")
+                      i.fa.fa-facebook-official
+                    a.footer__social__link(href="#")
+                      i.fa.fa-instagram
+                    a.footer__social__link(href="#")
+                        i.fa.fa-vk
 link(rel="stylesheet", href="css/libs.min.css")
-link(rel="stylesheet", href="css/main.css")
-script(type="text/javascript" src="js/libs.min.js")
-script(type="text/javascript" src="libs/lightbox2/dist/js/lightbox.js")
-script(type="text/javascript" src="js/common.js")
+link(rel="stylesheet", href="css/main.min.css")
+script(type="text/javascript", src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+script(type="text/javascript", src="js/libs.min.js")
+script(type="text/javascript", src="js/common.js")

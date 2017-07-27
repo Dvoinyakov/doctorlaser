@@ -88,11 +88,111 @@ $('.slider-main').owlCarousel({
 
     });
 
-    $(document).ready(function() {
+
         $('.callbacks__item__date').mask('00/00');
         $('.callbacks__item__time').mask('00:00');
+        $('.callback__form__popup__time').mask('00:00');
         $('.callbacks__item__phone').mask('8 (999) 999-99-99');
-    });
+        $('.footer__callback__form__input').mask('8 (999) 999-99-99');
+        $('.callback__form__popup__phone').mask('8 (999) 999-99-99');
 
+// Select all links with hashes
+    $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function(event) {
+            // On-page links
+            if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                &&
+                location.hostname == this.hostname
+            ) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000, function() {
+                        // Callback after animation
+                        // Must change focus!
+                        var $target = $(target);
+                        $target.focus();
+                        if ($target.is(":focus")) { // Checking if the target was focused
+                            return false;
+                        } else {
+                            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                            $target.focus(); // Set focus again
+                        };
+                    });
+                }
+            }
+        });
+
+
+        $('.header__address__link__to_call_js__call').magnificPopup({
+            type: 'inline',
+            preloader: false,
+            focus: '#name',
+
+
+            callbacks: {
+                beforeOpen: function() {
+                    if($(window).width() < 700) {
+                        this.st.focus = false;
+                    } else {
+                        this.st.focus = '#name';
+                    }
+                }
+            }
+        });
+
+    $('.header__address__link__to__map').magnificPopup();
+    $('.footer__address__text').magnificPopup();
+    $('.footer__button').magnificPopup();
+
+
+
+
+
+    ymaps.ready(init);
+
+
+    function init() {
+
+
+        var myMap = new ymaps.Map("map", {
+            center: [55.567636, 37.487496],
+            zoom: 13
+        }, {
+            searchControlProvider: 'yandex#search'
+        });
+        ymaps.geolocation.get({
+            provider: 'browser',
+            mapStateAutoApply: true
+        }).then(function (result) {
+            var usermes = result.geoObjects['position'];
+          ymaps.route([
+              usermes,
+            'Москва,п. Коммунарка, Липовый парк д.9'
+        ]).then(function (route) {
+            myMap.geoObjects.add(route);
+            var points = route.getWayPoints(),
+                lastPoint = points.getLength() - 1;
+            // Задаем стиль метки - иконки будут красного цвета, и
+            // их изображения будут растягиваться под контент.
+            points.options.set('preset', 'islands#redStretchyIcon');
+            points.get(0).properties.set('iconContent', 'Вы');
+            points.get(lastPoint).properties.set('iconContent', 'Клиника Доктор Лазер');
+
+        }, function (error) {
+            alert('Возникла ошибка: ' + error.message);
+        });
+        });
+    }
 
 });

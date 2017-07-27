@@ -41,10 +41,10 @@ gulp.task('pugbuild', function () {
 gulp.task('scripts', function () {
     return gulp.src([
         'app/libs/jquery/dist/jquery.min.js',
+        'app/libs/lightbox2/dist/js/lightbox.js',
         'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
         'app/libs/owl.carousel/dist/owl.carousel.js',
-        'app/libs/jquery-mask-plugin/dist/jquery.mask.min.js',
-        'app/libs/dist/lightbox.js'
+        'app/libs/jquery-mask-plugin/dist/jquery.mask.min.js'
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
@@ -55,7 +55,7 @@ gulp.task('scripts', function () {
 //обновление страницы
 gulp.task('browser-sync', function () {
     browserSync({
-        port:900,
+        port:700,
        server: {
            baseDir:'app'
        },

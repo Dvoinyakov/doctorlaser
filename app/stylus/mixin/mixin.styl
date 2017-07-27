@@ -5,10 +5,7 @@
 webfont(namefont, weight)
   @font-face
     font-family namefont
-    src url('../fonts/' + namefont + '/' + namefont + '.woff') format('woff'),
-        url('../fonts/' + namefont + '/' + namefont + '.ttf') format('truetype'),
-        url('../fonts/' + namefont + '/' + namefont + '.otf') format('truetype'),
-        url('../fonts/' + namefont + '/' + namefont + '.svg#'+ family) format('svg')
+    src url('../fonts/' + namefont + '/' + namefont + '.ttf') format('truetype')
     font-weight weight
 
 /////////////////////////////////////////////////////////////
@@ -18,3 +15,15 @@ box-shadow()
   -moz-box-shadow arguments
   -webkit-box-shadow arguments
   box-shadow arguments
+/////////////////////////////////////////////////////////////
+// Цвет плейсхолдера
+/////////////////////////////////////////////////////////////
+placeholder()
+  &::-webkit-input-placeholder
+    {block}
+  &:-moz-placeholder
+    {block}
+  &::-moz-placeholder
+    {block}
+  &:-ms-input-placeholder
+    {block}

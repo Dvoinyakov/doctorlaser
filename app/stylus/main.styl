@@ -10,6 +10,12 @@ body
   overflow-x hidden
   font-size 20px
   line-height 30px
+div
+  &:focus
+   outline none
+a
+  &:focus
+    outline none
 .header__logo
   width: 280px
   padding-top 10px
@@ -290,6 +296,8 @@ body
     font-family "PF DinText Pro"
     border none
     transition .25s ease
+    +placeholder()
+      color #000
     &:focus
       outline none
       box-shadow(0px 2px 0px 0px rgba(fcolor,1))
@@ -433,6 +441,8 @@ body
   margin-top: 40px
   background scolor
   padding: 20px 0 40px 0
+  &__info
+    line-height: 21px;
   &__timephone
     &__text
      color:white
@@ -447,10 +457,64 @@ body
   &__address
     &__text
       color white
-      line-height 19px
+      line-height 15px
       font-size: 12px
+
     &__icon__map
       color white
+  &__button
+      background #fff
+      border 1px solid transparent
+      font-size: 16px
+      color #000
+      text-transform none
+      padding: 7px 44px;
+      &:hover
+       border 1px solid #fff
+       background transparent
+       color: #ffffff
+  &__callback
+     &__form
+      &__h5
+        font-size: 12px
+        color: #fff
+        margin: 0
+        margin-top: 25px
+      &__input
+        background transparent
+        border-bottom 2px solid white
+        border-top none
+        border-left none
+        border-right none
+        color white
+        font-family "PF DinText Pro"
+        font-size: 16px
+        padding 8px 12px 4px 0px
+        +placeholder()
+            color #fff
+        &:focus
+          outline none
+      &__button
+        font-size: 25px
+        color: #fff
+        vertical-align: middle
+        transition .2s ease
+        &:hover
+          opacity 0.8
+          transition .2s ease
+  &__social
+     &__h5
+       font-size: 12px
+       color: #fff
+       margin: 0
+       margin-top: 25px
+     &__link
+       color: white
+       font-size: 20px
+       &:nth-child(2), &:nth-child(3)
+        padding-left 10px
+       &:hover
+        opacity 0.8
 .footer__menu
   &__h5
     color white
@@ -458,11 +522,13 @@ body
     margin 0
     margin-bottom: 20px
     font-family Raleway-Semibold
+    margin-left: 10px
   &__ul
     list-style-type none
     font-size: 15px
     margin 0
     padding 0
+    margin-left: 10px
   &__li
     margin: 0
     padding: 0
@@ -472,5 +538,53 @@ body
      line-height 10px
      &:hover
       text-decoration underline
-
+.callback
+  &__form
+    &__popup
+      background #fff
+      margin auto
+      width 320px
+      display: flex
+      flex-direction: column
+      padding: 20px 34px
+      background graycolor
+      position relative
+      &__h4
+        font-family Raleway-Semibold
+        text-transform uppercase
+        text-align center
+        margin: 0
+      &:focus
+       outline none
+      &__name, &__phone, &__time
+        margin: 10px 0
+        padding: 16px 13px
+        font-size: 16px
+        border 1px solid #ebedf0
+        font-family "PF DinText Pro"
+        border none
+        transition .25s ease
+        +placeholder()
+          color #000
+        &:focus
+          outline none
+          outline none
+          box-shadow(0px 2px 0px 0px rgba(fcolor,1))
+          transition .25s ease
+       &__button
+          text-align: center;
+          font-size: 15px;
+          display: block;
+          padding: 5px 9px;
+          margin: 9px 25px;
+.mfp-close-btn-in .mfp-close
+  transition .2s ease
+  color fcolor
+  opacity 1
+  &:hover
+    transform rotate(90deg)
+#map
+  width 100%
+  height 500px
+  display block
 @import '_media.styl'

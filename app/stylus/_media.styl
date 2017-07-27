@@ -114,6 +114,70 @@
         background-size 29px
   .opinion__item:nth-child(2), .opinion__item:nth-child(4)
       display none
+
+  .footer
+    &__timephone
+      &__text
+        color:white
+        font-size: 12px
+        line-height 16px
+        margin: 0
+        span
+          font-family PfDinTextPro-Medium
+      &__phone
+        color white
+        font-family PfDinTextPro-Medium
+        text-decoration none
+        font-size: 17px
+        margin-top 5px
+    &__address
+      &__text
+        color white
+        line-height 15px
+        font-size: 12px
+        margin-top 5px
+    &__button
+      font-size: 14px
+      padding: 7px 30px;
+      &:hover
+        border 1px solid #fff
+        background transparent
+        color: #ffffff
+    &__callback
+      &__form
+        &__h5
+          font-size: 12px
+          color: #fff
+          margin: 0
+          margin-top: 25px
+        &__input
+          font-size: 12px
+          padding 8px 0px 4px 0px
+        &__button
+          font-size: 15px
+  .footer__menu
+    &__h5
+      color white
+      font-size: 15px
+      margin 0
+      margin-bottom: 0px
+      font-family Raleway-Semibold
+      margin-left: 10px
+    &__ul
+      list-style-type none
+      font-size: 13px
+      margin 0
+      padding 0
+      margin-left: 10px
+    &__li
+      margin: 0
+      padding: 0
+    &__a
+      text-decoration none
+      color white
+      line-height 10px
+      &:hover
+        text-decoration underline
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
   .header__logo
@@ -169,6 +233,8 @@
   .treatment__item
     margin-top: 40px
     padding-left 15px
+  .treatment__line
+    margin 0
   .callbacks
     background graycolor
   .callbacks__item
@@ -194,34 +260,55 @@
       &:focus
         background: #fff;
         background-size 29px
-.opinion
-  &__line
-    margin-top: 0px;
-  &__item
-    display flex
-    justify-content: center;
-    margin-top: 40px
-    &__img
-      border-radius 50%
-      width 90px
-      height 90px
-    &__text
-      color #202020
-      padding-left 20px
-    &__h5
-      font-size 20px
-      font-family Raleway-Semibold
-      margin 0
-      margin-bottom 10px
-    &__p
-      font-size 15px
-      font-family default-font
-      line-height 20px
-      margin: 0
-.diploma
-  &__items
-     &__img
-       width 80%
+  .opinion
+    &__line
+      margin-top: 0px;
+    &__item
+      display flex
+      justify-content: center;
+      margin-top: 40px
+      &__img
+        border-radius 50%
+        width 90px
+        height 90px
+      &__text
+        color #202020
+        padding-left 20px
+      &__h5
+        font-size 20px
+        font-family Raleway-Semibold
+        margin 0
+        margin-bottom 10px
+      &__p
+        font-size 15px
+        font-family default-font
+        line-height 20px
+        margin: 0
+  .diploma
+    &__items
+       &__img
+         width 80%
+  .footer
+    padding 20px 0 20px 0
+  .footer__timephone__phone
+    font-size: 16px
+  .footer__address__text
+    font-size: 10px
+    display block
+  .footer__menu__h5
+    font-size: 13px
+  .footer__menu__ul
+    font-size: 12px
+    line-height: 22px
+  .footer__callback__form__h5
+    margin-top: 10px
+    line-height: 15px
+  .footer__callback__form__button
+    font-size: 12px
+  .footer__button
+    font-size: 12px
+    padding: 7px 22px
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
   .header__timephone__phone
@@ -237,6 +324,8 @@
     font-size 29px
   .content__flex-center
     padding 0 40px
+  .hidden-480
+    display none
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
   .header__logo
