@@ -1,15 +1,15 @@
 //- includes/head.pug
 head
     title Доктор лазер
-    style(opacity:0; overflow-x:hidden;)
+    style(type="text/css") body { opacity:0; overflow-x:hidden;display: none;}
     meta(charset = 'utf-8')
     meta(name='viewport', content="width=device-width, initial-scale=1, maximum-scale=1")
     meta(name='description', content='')
-    meta(property='og:image', content='')
-    link(rel="shortcut icon" href="")
-    link(rel="apple-touch-icon" href="")
-    link(rel="apple-touch-icon" sizes="72x72" href="")
-    link(rel="apple-touch-icon" sizes="114x114" href="")
+    meta(property='og:image', content='img/logo.svg')
+    link(rel="shortcut icon" href="img/favicon.ico")
+    link(rel="apple-touch-icon" href="img/logo.svg")
+    link(rel="apple-touch-icon" sizes="72x72" href="img/logo.svg")
+    link(rel="apple-touch-icon" sizes="114x114" href="img/logo.svg")
     //chrome
     meta(name="theme-color" content="#a3dfc7")
     //windows /phone
@@ -20,7 +20,8 @@ header.header
     .container
         .row
             .col-sm-6.col-md-4.col-xs-6
-                img.header__logo(src="img/logo.svg")
+                a(href="/")
+                    img.header__logo(src="img/logo.svg")
             .hidden-sm.col-md-5.hidden-xs
                 .header__address
                     p.header__address__text

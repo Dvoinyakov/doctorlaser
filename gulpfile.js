@@ -44,7 +44,8 @@ gulp.task('scripts', function () {
         'app/libs/lightbox2/dist/js/lightbox.js',
         'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
         'app/libs/owl.carousel/dist/owl.carousel.js',
-        'app/libs/jquery-mask-plugin/dist/jquery.mask.min.js'
+        'app/libs/jquery-mask-plugin/dist/jquery.mask.min.js',
+        'app/libs/jquerycookie/jquery.cookie.js'
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())

@@ -2,15 +2,15 @@
 <html>
   <head>
     <title>Доктор лазер</title>
-    <style opacity:0; overflow-x:hidden;></style>
+    <style type="text/css">body { opacity:0; overflow-x:hidden;display: none;}</style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="">
-    <meta property="og:image" content="">
-    <link rel="shortcut icon" href="">
-    <link rel="apple-touch-icon" href="">
-    <link rel="apple-touch-icon" sizes="72x72" href="">
-    <link rel="apple-touch-icon" sizes="114x114" href="">
+    <meta property="og:image" content="img/logo.svg">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/logo.svg">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/logo.svg">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/logo.svg">
     <!--chrome-->
     <meta name="theme-color" content="#a3dfc7">
     <!--windows /phone-->
@@ -21,7 +21,7 @@
   <header class="header">
     <div class="container">
       <div class="row">
-        <div class="col-sm-6 col-md-4 col-xs-6"><img class="header__logo" src="img/logo.svg"></div>
+        <div class="col-sm-6 col-md-4 col-xs-6"><a href="/"><img class="header__logo" src="img/logo.svg"></a></div>
         <div class="hidden-sm col-md-5 hidden-xs">
           <div class="header__address">
             <p class="header__address__text"><i class="fa fa-map-marker header__address__icon__map"></i> Адрес: г. Москва, п. Коммунарка, Липовый парк д.9 <a class="header__address__link__to__map" href="#maps__address">На карте</a>
@@ -116,7 +116,7 @@
           <p class="card__doctor__p">Врач высшей категории, терапевт, кардиолог (стаж 12 лет)</p><a class="card__doctor__link" href="#">Подробнее</a>
         </div>
       </div>
-    </div>
+    </div><a class="about__link" href="./doctors.html">Посмотреть всех врачей</a>
   </div>
   <div class="treatment">
     <div class="container treatment__line">
@@ -132,7 +132,7 @@
           <div class="treatment__item__header"><img class="treatment__item__header__img" src="img/treatment/heart.svg">
             <h4 class="treatment__item__header__h4">Сердечно-сосудистая система</h4>
           </div>
-          <div class="treatment__item__p">Профилактика и лечение атеросклероза, сосудистой патологии сердца.</div><a class="treatment__item__link" href="#">Подробнее</a>
+          <div class="treatment__item__p">Профилактика и лечение атеросклероза, сосудистой патологии сердца.</div><a class="treatment__item__link" href="/article.html">Подробнее</a>
         </div>
         <div class="col-sm-4 col-md-4 col-xs-12 treatment__item">
           <div class="treatment__item__header"><img class="treatment__item__header__img" src="img/treatment/spine.svg">
@@ -182,13 +182,13 @@
           </div><a class="treatment__item__link" href="#">Подробнее</a>
         </div>
         <div class="col-sm-4 col-md-4 col-xs-12 treatment__item">
-          <div class="treatment__item__header"><img class="treatment__item__header__img" src="img/treatment/hair.svg">
+          <div class="treatment__item__header"><img class="treatment__item__header__img" src="img/treatment/light.svg">
             <h4 class="treatment__item__header__h4">Хирургия</h4>
           </div>
           <div class="treatment__item__p">Быстрое заживление ран, ожогов, переломов костей, заболеваний мягких тканей.</div><a class="treatment__item__link" href="#">Подробнее</a>
         </div>
         <div class="col-sm-4 col-md-4 col-xs-12 treatment__item">
-          <div class="treatment__item__header"><img class="treatment__item__header__img" src="img/treatment/ear.svg">
+          <div class="treatment__item__header"><img class="treatment__item__header__img" src="img/treatment/hair.svg">
             <h4 class="treatment__item__header__h4">Дерматология</h4>
           </div>
           <div class="treatment__item__p">Герпес, дерматиты, нейродермиты, экзема, угревая сыпь.</div><a class="treatment__item__link" href="#">Подробнее</a>
@@ -198,13 +198,13 @@
     <div class="container treatment__line treatment__line__hidden">
       <div class="row">
         <div class="col-sm-4 col-md-4 col-xs-12 treatment__item">
-          <div class="treatment__item__header"><img class="treatment__item__header__img" src="img/treatment/light.svg">
+          <div class="treatment__item__header"><img class="treatment__item__header__img" src="img/treatment/tooth.svg">
             <h4 class="treatment__item__header__h4">Стоматология</h4>
           </div>
           <div class="treatment__item__p">Пульпит, периодонтит, парадонтоз, повреждения и язвы слизистой.</div><a class="treatment__item__link" href="#">Подробнее</a>
         </div>
         <div class="col-sm-4 col-md-4 col-xs-12 treatment__item">
-          <div class="treatment__item__header"><img class="treatment__item__header__img" src="img/treatment/tooth.svg">
+          <div class="treatment__item__header"><img class="treatment__item__header__img" src="img/treatment/ear.svg">
             <h4 class="treatment__item__header__h4">Отоларингология</h4>
           </div>
           <div class="treatment__item__p">Ангина, фарингит, тонзилит, синусит, трахеит, отит, ринит.</div><a class="treatment__item__link" href="#">Подробнее</a>
@@ -307,7 +307,7 @@
           </div>
         </div>
       </div>
-    </div><a class="opinion__link" href="#">Посмотреть все отзывы</a>
+    </div><a class="opinion__link" href="/opinion.html">Посмотреть все отзывы</a>
   </div>
   <div class="diploma">
     <div class="container">
@@ -327,7 +327,7 @@
           <div class="col-sm-2 col-md-2 col-xs-4"><a class="diploma__items__link" href="img/diploma.jpg" data-lightbox="image-1" data-title="Описание"><img class="diploma__items__img" src="img/diploma.jpg" data-lightbox="image-1" data-title="Описание"></a></div>
           <div class="col-sm-2 col-md-2 col-xs-4"><a class="diploma__items__link" href="img/diploma.jpg" data-lightbox="image-1" data-title="Описание"><img class="diploma__items__img" src="img/diploma.jpg" data-lightbox="image-1" data-title="Описание"></a></div>
         </div>
-      </div><a class="diploma__items__link" href="#">Посмотреть все</a>
+      </div><a class="diploma__items__link" href="/diploma.html">Посмотреть все</a>
     </div>
   </div>
 </html>
@@ -386,6 +386,9 @@
     </div>
   </div>
 </footer>
+<div id="hellopreloader" style="display:none;">
+  <div id="hellopreloader_preload"></div>
+</div>
 <link rel="stylesheet" href="./css/libs.min.css">
 <link rel="stylesheet" href="./css/main.min.css">
 <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>

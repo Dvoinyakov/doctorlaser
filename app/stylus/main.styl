@@ -10,12 +10,15 @@ body
   overflow-x hidden
   font-size 20px
   line-height 30px
+  transition .9s
 div
   &:focus
    outline none
 a
   &:focus
     outline none
+.header
+  padding-top: 20px
 .header__logo
   width: 280px
   padding-top 10px
@@ -172,6 +175,18 @@ a
     font-size 20px
 .content__flex-center
   margin auto
+.about
+  &__link
+    color #202020
+    text-align center
+    display block
+    margin-top 20px
+    font-family Raleway-Semibold
+    font-size: 16px
+    transition .2s ease
+    &:hover
+      color fcolor
+      transition .2s ease
 .about__card__doctor
   position relative
   padding 30px 60px
@@ -426,6 +441,9 @@ a
     background graycolor
     width 100%
     padding 50px 0px
+    &_nonback
+     background none
+     padding 0 0
     &__link
       color #202020
       text-align center
@@ -441,6 +459,8 @@ a
   margin-top: 40px
   background scolor
   padding: 20px 0 40px 0
+  &__img
+    max-width 250px
   &__info
     line-height: 21px;
   &__timephone
@@ -587,4 +607,90 @@ a
   width 100%
   height 500px
   display block
+.page
+  &__breadcumb
+    border-top: 1px solid #fe6284;
+    margin-top: 20px;
+    span
+      font-size: 12px
+      padding 0 5px
+    &__link
+      font-size: 12px
+      font-family Raleway-Regular
+      color #000
+      transition .2s ease
+      &:hover
+        color fcolor
+        transition .2s ease
+  &__content
+    img
+      width 100%
+    &__h2
+      font-size: 25px
+      font-family Raleway-Semibold
+      color scolor
+    &__p
+      font-size: 15px
+    &__link
+      color fcolor
+      transition .2s ease
+      &:hover
+        opacity 0.8
+.category
+  text-align center
+  padding 20px 0
+  &__icon
+    font-size: 20px
+    padding 0 20px
+    margin 0 auto
+    color black
+    text-decoration none
+    position relative
+    &:before
+      content "\f004"
+      position absolute
+      left 20px
+      font-family FontAwesome
+      color scolor
+      font-size: 50px
+      opacity .2
+      transition .2s ease
+    &:hover
+      color fcolor
+      &:before
+        color fcolor
+        font-size: 60px
+#hellopreloader
+  p
+    display:none;
+#hellopreloader_preload
+    display: block;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff url('../img/logo.svg') center center no-repeat;
+    background-size:300px
+    animation: .8s infinite beatHeart;
+
+@keyframes beatHeart {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @import '_media.styl'

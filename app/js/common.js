@@ -154,6 +154,7 @@ $('.slider-main').owlCarousel({
     $('.header__address__link__to__map').magnificPopup();
     $('.footer__address__text').magnificPopup();
     $('.footer__button').magnificPopup();
+    $('.page__content__link').magnificPopup();
 
 
 
@@ -193,6 +194,20 @@ $('.slider-main').owlCarousel({
             alert('Возникла ошибка: ' + error.message);
         });
         });
+    }
+
+  var ss = $.cookie('cookie_checksite');
+    if(ss == 'true') {
+        $('body').css('display', 'block');
+        $( "#hellopreloader" ).hide( "slow", function() {
+        });
+          }
+    else {
+        $('#hellopreloader').css('display', 'block');
+        $.cookie('cookie_checksite', 'true');
+        var hellopreloader = document.getElementById("hellopreloader_preload");function
+        fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1000);};
+        $('body').css('display', 'block');
     }
 
 });
